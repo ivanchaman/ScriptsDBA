@@ -1,0 +1,1 @@
+select * from master.sys.databases where HAS_DBACCESS (name) = 1
