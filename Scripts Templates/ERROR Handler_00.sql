@@ -1,0 +1,1 @@
+SELECT @nMyErr = @@ERROR, @nRowsAffected = @@ROWCOUNT  IF @nMyErr != 0 BEGIN SET @sMsg = N'     <Failure Message, NVARCHAR, *** Failed to ...> - @@ERROR: ' + CAST(@nMyErr AS NVARCHAR)   RAISERROR(@sMsg, 16, 1) WITH NOWAIT, LOG  IF 0 < @@TRANCOUNT ROLLBACK RETURN END
