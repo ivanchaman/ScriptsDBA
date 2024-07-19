@@ -1,0 +1,1 @@
+exec sp_changeobjectowner 'schema.DatabaseName', 'dbo'
